@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АТОМНЫЙ МЫШЕЦЫД</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="game-container">
+    <canvas id="gameCanvas"></canvas>
+    <div id="score" class="hidden">Очки: 0</div>
+    <div id="gameStart" class="screen">
+        <h1>АТОМНЫЙ МЫШЕЦЫД</h1>
+        <p>Ночная охота в звездном лесу</p>
+        <p><strong>Управление:</strong><br>
+            W / ПРОБЕЛ - взмах крыльями<br>
+            S / E / КЛИК - пикирование<br>
+            Отпусти - планирование</p>
+        <button id="startButton">Начать охоту</button>
+    </div>
+    <div id="gameOver" class="screen hidden">
+        <h2>Игра окончена!</h2>
+        <p id="scoreText">Очки: 0</p>
+        <button id="restartButton">Охотиться снова</button>
+    </div>
+    <div id="gameWin" class="screen hidden">
+        <h2>Победа!</h2>
+        <p id="winScoreText">Очки: 0</p>
+        <button id="nextLevelButton">Следующий уровень</button>
+    </div>
+</div>
+
+<!-- Подключаем все JS файлы в правильном порядке -->
+<script src="js/utils/constants.js"></script>
+<script src="js/systems/InputHandler.js"></script>
+<script src="js/effects/LandingEffects.js"></script> <!-- Новый файл -->
+<script src="js/systems/PhysicsEngine.js"></script>
+<script src="js/systems/CollisionSystem.js"></script>
+<script src="js/systems/MiceAi.js"></script>
+<script src="js/entities/OwlSprite.js"></script>
+<script src="js/entities/OwlAnimation.js"></script>
+<script src="js/entities/blood.js"></script>
+<script src="js/ui/GameUI.js"></script>
+<script src="js/background/LevelBackground.js"></script>
+<script src="js/levels/Level.js"></script>
+<script src="js/levels/Level1.js"></script>
+<script src="js/entities/MiceSprite.js"></script>
+<script src="js/entities/MiceAnimation.js"></script>
+<script src="js/entities/MousePhysics.js"></script>
+<script src="js/entities/MouseRenderer.js"></script>
+<script src="js/entities/MouseBehavior.js"></script>
+<script src="js/entities/Mice.js"></script>
+<script src="js/core/Game.js"></script>
+<script src="js/entities/Player.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
